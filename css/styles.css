@@ -3,6 +3,7 @@
   | root
   |============================
 */
+
 :root {
   --primary-interactive-color: #4d5ae5;
   --title-color: #2e2f42;
@@ -44,12 +45,32 @@ button {
   margin: 0;
 }
 
+/* Phone screen */
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 320px;
+  max-width: 428px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  outline: solid 2px red;
+}
+/* Tablet screen */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* Desktop screen */
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1128px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 h1,
@@ -248,42 +269,103 @@ nav {
 }
 
 /* advantages-section */
+
+.advantages-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .advantages-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 72px;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .advantages-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .advantages-list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .advantages-list-item {
+    flex-basis: calc((100% - 24px * 3) / 4);
+  }
+}
+
 .advantages-list-wrapper {
-  background-color: var(--light-bg);
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  margin-bottom: 8px;
+  display: none;
+}
+
+@media only screen and (min-width: 1158px) {
+  .advantages-list-wrapper {
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    margin-bottom: 8px;
+  }
 }
 
 .advantages-title {
   color: var(--title-color);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 768px) {
+  .advantages-title {
+    text-align: start;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .advantages-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
 }
 
 .advantages-desc {
   color: var(--text-color);
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.advantages-list {
-  display: flex;
-  gap: 24px;
+@media only screen and (min-width: 1158px) {
+  .advantages-desc {
+    font-weight: 400;
+  }
 }
 
-.advantages-list-item {
-  flex-basis: calc((100% - 24px * 3) / 4);
-}
 /* skills-section */
 /**
-  |============================
+|============================
   | CARD-SET
   |============================
 */

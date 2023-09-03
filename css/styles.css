@@ -118,6 +118,13 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+@media only screen and (max-width: 767.98px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
 /* logo */
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -127,7 +134,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  margin-right: 249px;
 }
 
 .accent-logo {
@@ -192,6 +199,12 @@ nav {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .nav-list {
+    display: none;
+  }
+}
+
 .contact-list-link {
   color: var(--text-color);
   font-weight: 400;
@@ -208,6 +221,12 @@ nav {
 .contact-list {
   display: flex;
   gap: 40px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .contact-list {
+    display: none;
+  }
 }
 
 .page-header-container {
@@ -1023,13 +1042,11 @@ input[type='checkbox']:checked + .modal-form-agreement > .agreement-checkbox {
   |============================
 */
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: 22px;
+  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin: 0;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
@@ -1038,7 +1055,7 @@ input[type='checkbox']:checked + .modal-form-agreement > .agreement-checkbox {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -1075,9 +1092,6 @@ input[type='checkbox']:checked + .modal-form-agreement > .agreement-checkbox {
 }
 
 .mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .mobile-menu .link {

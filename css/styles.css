@@ -328,6 +328,17 @@ nav {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bgdesc@1x.jpg);
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   .hero-section {
     padding: 188px 0px;
@@ -881,7 +892,7 @@ nav {
 }
 
 .footer-form-input {
-  min-width: 398px;
+  min-width: 100%;
   max-height: 40px;
   padding-left: 16px;
   padding-top: 8px;
@@ -899,7 +910,7 @@ nav {
 
 @media only screen and (min-width: 768px) {
   .footer-form-input {
-    min-width: 264px;
+    max-width: 264px;
   }
 }
 

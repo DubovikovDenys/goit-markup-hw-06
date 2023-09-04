@@ -281,7 +281,6 @@ nav {
 
 .hero-section {
   padding: 112px 0px;
-  max-width: 1440px;
   margin: 0 auto;
   background-color: var(--dark-bg);
   background-image: linear-gradient(
@@ -341,6 +340,7 @@ nav {
 
 @media only screen and (min-width: 1158px) {
   .hero-section {
+    max-width: 1440px;
     padding: 188px 0px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -354,7 +354,6 @@ nav {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-section {
-    padding: 188px 0px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -857,6 +856,10 @@ nav {
 }
 
 /* footer-form */
+
+.footer-form-wrapper {
+  min-width: 100%;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1157.98hpx) {
   .footer-form-wrapper {
